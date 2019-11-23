@@ -30,7 +30,7 @@ import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-
+import ChallengePage from "views/examples/ChallengePage.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -49,8 +49,12 @@ ReactDOM.render(
           render={props => <ProfilePage {...props} />}
         />
         <Route path="/login-page" render={props => <LoginPage {...props} />} />
-        <Redirect to="/index" />
-        <Redirect from="/" to="/index" />
+        <Route
+          path="/challenge-page"
+          render={props => <ChallengePage {...props} />}
+        />
+        <Redirect to="/landing-page" />
+        <Redirect from="/" to="/landing-page" />
       </Switch>
     </Switch>
   </BrowserRouter>,

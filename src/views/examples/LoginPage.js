@@ -50,10 +50,7 @@ function LoginPage() {
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                     <div className="logo-container">
-                      <img
-                        alt="..."
-                        src={require("assets/img/now-logo.png")}
-                      ></img>
+                      <img alt="..." src={require("assets/img/logo.png")}></img>
                     </div>
                   </CardHeader>
                   <CardBody>
