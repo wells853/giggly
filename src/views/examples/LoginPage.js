@@ -60,7 +60,7 @@ function LoginPage() {
                     <InputGroup
                       className={
                         "no-border input-lg" +
-                        (firstFocus ? " input-group-focus" : "")
+                        (lastFocus ? " input-group-focus" : "")
                       }
                     >
                       <InputGroupAddon addonType="prepend">
@@ -69,10 +69,10 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Email Address..."
+                        placeholder="Name..."
                         type="text"
-                        onFocus={() => setFirstFocus(true)}
-                        onBlur={() => setFirstFocus(false)}
+                        onFocus={() => setLastFocus(true)}
+                        onBlur={() => setLastFocus(false)}
                       ></Input>
                     </InputGroup>
                     <InputGroup
@@ -87,7 +87,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Access Code..."
+                        placeholder="Room ID..."
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -103,7 +103,7 @@ function LoginPage() {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Login
+                      Join Room
                     </Button>
                   </CardFooter>
                 </Form>
