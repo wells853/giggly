@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -70,100 +70,85 @@ function LoginPage() {
   }
 
   return (
-    <div>
-      <div>{state.currentScreen}</div>
-
-      {state.currentScreen === "WhatIsYourUsernameScreen" ? (
-        <>
-          <div className="page-header clear-filter" filter-color="blue">
-            <div
-              className="page-header-image"
-              style={{
-                backgroundImage: "url(" + require("assets/img/login2.jpg") + ")"
-              }}
-            ></div>
-            <div className="content">
-              <Container>
-                <Col className="ml-auto mr-auto" md="4">
-                  <Card className="card-login card-plain">
-                    <Form action="" className="form" method="">
-                      <CardHeader className="text-center">
-                        <div className="logo-container">
-                          <img
-                            alt="..."
-                            src={require("assets/img/now-logo.png")}
-                          ></img>
-                        </div>
-                      </CardHeader>
-                      <CardBody>
-                        <InputGroup
-                          className={
-                            "no-border input-lg" +
-                            (firstFocus ? " input-group-focus" : "")
-                          }
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="now-ui-icons users_circle-08"></i>
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Email Address..."
-                            type="text"
-                            onFocus={() => setFirstFocus(true)}
-                            onBlur={() => setFirstFocus(false)}
-                            onChange={onChange}
-                          ></Input>
-                        </InputGroup>
-                        <InputGroup
-                          className={
-                            "no-border input-lg" +
-                            (lastFocus ? " input-group-focus" : "")
-                          }
-                        >
-                          <InputGroupAddon addonType="prepend">
-                            <InputGroupText>
-                              <i className="now-ui-icons business_badge"></i>
-                            </InputGroupText>
-                          </InputGroupAddon>
-                          <Input
-                            placeholder="Access Code..."
-                            type="text"
-                            onFocus={() => setLastFocus(true)}
-                            onBlur={() => setLastFocus(false)}
-                          ></Input>
-                        </InputGroup>
-                      </CardBody>
-                      <CardFooter className="text-center">
-                        <Link
-                          to={{
-                            pathname: "/messaging-page",
-                            state: { userName: state.usrname }
-                          }}
-                        >
-                          <Button
-                            block
-                            className="btn-round"
-                            color="info"
-                            href="#pablo"
-                            onClick={() => onUsernameSubmitted(state.usrname)}
-                            size="lg"
-                          >
-                            Login
-                          </Button>
-                        </Link>
-                      </CardFooter>
-                    </Form>
-                  </Card>
-                </Col>
-              </Container>
-            </div>
-          </div>
-        </>
-      ) : (
-        <div>Chat Screen</div>
-      )}
-    </div>
+    <>
+      <div className="page-header clear-filter" filter-color="blue">
+        <div
+          className="page-header-image"
+          style={{
+            backgroundImage: "url(" + require("assets/img/bg-green.png") + ")"
+          }}
+        ></div>
+        <div className="content">
+          <Container>
+            <Col className="ml-auto mr-auto" md="4">
+              <Card className="card-login card-plain">
+                <Form action="" className="form" method="">
+                  <CardHeader className="text-center">
+                    <div className="logo-container">
+                      <img
+                        alt="..."
+                        src={require("assets/img/logo-white.png")}
+                      ></img>
+                    </div>
+                  </CardHeader>
+                  <CardBody>
+                    <InputGroup
+                      className={
+                        "no-border input-lg" +
+                        (lastFocus ? " input-group-focus" : "")
+                      }
+                    >
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="now-ui-icons users_circle-08"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Username or Email Address..."
+                        type="text"
+                        onFocus={() => setLastFocus(true)}
+                        onBlur={() => setLastFocus(false)}
+                      ></Input>
+                    </InputGroup>
+                    <InputGroup
+                      className={
+                        "no-border input-lg" +
+                        (lastFocus ? " input-group-focus" : "")
+                      }
+                    >
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="now-ui-icons business_badge"></i>
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input
+                        placeholder="Password..."
+                        type="text"
+                        onFocus={() => setLastFocus(true)}
+                        onBlur={() => setLastFocus(false)}
+                      ></Input>
+                    </InputGroup>
+                  </CardBody>
+                  <CardFooter className="text-center">
+                    <Link to="/challenge-page">
+                      <Button
+                        block
+                        className="btn-round"
+                        color="info"
+                        href="#pablo"
+                        size="lg"
+                      >
+                        Log In
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </Form>
+              </Card>
+            </Col>
+          </Container>
+        </div>
+      </div>
+    </>
   );
 }
 

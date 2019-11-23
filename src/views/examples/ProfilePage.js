@@ -32,7 +32,6 @@ function ProfilePage() {
   });
   return (
     <>
-      <ExamplesNavbar />
       <div className="wrapper">
         <ProfilePageHeader />
         <div className="section">
