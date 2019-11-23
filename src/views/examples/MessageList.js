@@ -65,7 +65,7 @@ class MessagesList extends Component {
                       href="#"
                       className="btn-round"
                       disabled
-                      color="success"
+                      color="default"
                       size="lg"
                     >
                       {message.text}
@@ -97,7 +97,7 @@ class MessagesList extends Component {
                       href="#"
                       className="btn-round"
                       disabled
-                      color="info"
+                      color="success"
                       size="lg"
                     >
                       {message.text}
