@@ -62,7 +62,7 @@ function ProfilePage() {
                           setPills("1");
                         }}
                       >
-                        <i className="now-ui-icons design_image"></i>
+                        <i className="now-ui-icons media-2_sound-wave"></i>
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -74,7 +74,7 @@ function ProfilePage() {
                           setPills("2");
                         }}
                       >
-                        <i className="now-ui-icons location_world"></i>
+                        <i className="now-ui-icons sport_user-run"></i>
                       </NavLink>
                     </NavItem>
                     <NavItem>
@@ -86,7 +86,7 @@ function ProfilePage() {
                           setPills("3");
                         }}
                       >
-                        <i className="now-ui-icons sport_user-run"></i>
+                        <i className="now-ui-icons education_hat"></i>
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -100,24 +100,24 @@ function ProfilePage() {
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg1.jpg")}
+                          src={require("assets/img/gallery-1.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
+                          src={require("assets/img/gallery-2.png")}
                         ></img>
                       </Col>
                       <Col md="6">
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
+                          src={require("assets/img/gallery-3.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
+                          src={require("assets/img/gallery-4.png")}
                         ></img>
                       </Col>
                     </Row>
@@ -130,24 +130,24 @@ function ProfilePage() {
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
+                          src={require("assets/img/gallery-8.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg11.jpg")}
+                          src={require("assets/img/gallery-7.png")}
                         ></img>
                       </Col>
                       <Col md="6">
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
+                          src={require("assets/img/gallery-6.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
+                          src={require("assets/img/gallery-5.png")}
                         ></img>
                       </Col>
                     </Row>
@@ -160,24 +160,19 @@ function ProfilePage() {
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
+                          src={require("assets/img/gallery-9.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
+                          src={require("assets/img/gallery-10.png")}
                         ></img>
                       </Col>
                       <Col md="6">
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
+                          src={require("assets/img/gallery-11.png")}
                         ></img>
                       </Col>
                     </Row>

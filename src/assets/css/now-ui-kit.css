@@ -4050,7 +4050,10 @@ img {
 
 .profile-page .gallery {
   margin-top: 45px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
 .section-full-page:after, .section-full-page:before {
   display: block;

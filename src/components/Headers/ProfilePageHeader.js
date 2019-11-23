@@ -36,7 +36,7 @@ function ProfilePageHeader() {
         ></div>
         <Container>
           <div className="photo-container">
-            <img alt="..." src={require("assets/img/phoebe.png")}></img>
+            <img alt="..." src={require("assets/img/phoebe-1.png")}></img>
           </div>
           <h3 className="title">Phoebe Yao</h3>
           <p className="category">Generalist</p>
