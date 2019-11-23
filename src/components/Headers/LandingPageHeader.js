@@ -1,7 +1,7 @@
 import React from "react";
-
+import { Link, Router } from "react-router-dom";
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 
 // core components
 
@@ -39,6 +39,21 @@ function LandingPageHeader() {
           </Container>
         </div>
       </div>
+      <Row>
+        <Col sm="12" md={{ size: 2, offset: 5 }}>
+          <Link to="/login-page">
+            <Button
+              block
+              className="btn-round"
+              color="info"
+              href="#pablo"
+              size="lg"
+            >
+              Log In
+            </Button>
+          </Link>
+        </Col>
+      </Row>
     </>
   );
 }
