@@ -300,7 +300,7 @@ function LandingPage() {
                     onClick={e => e.preventDefault()}
                     size="lg"
                   >
-                    Join Gigly
+                    Join Giggly
                   </Button>
                 </div>
               </Col>
