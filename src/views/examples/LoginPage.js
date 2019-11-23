@@ -40,7 +40,7 @@ function LoginPage() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/login2.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg-green.png") + ")"
           }}
         ></div>
         <div className="content">
@@ -50,7 +50,10 @@ function LoginPage() {
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                     <div className="logo-container">
-                      <img alt="..." src={require("assets/img/logo.png")}></img>
+                      <img
+                        alt="..."
+                        src={require("assets/img/logo-white.png")}
+                      ></img>
                     </div>
                   </CardHeader>
                   <CardBody>
@@ -66,7 +69,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Name..."
+                        placeholder="Username"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -84,7 +87,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Room ID..."
+                        placeholder="Access Code"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -100,7 +103,7 @@ function LoginPage() {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Join Room
+                      Login
                     </Button>
                   </CardFooter>
                 </Form>

@@ -27,13 +27,15 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/landing2.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg-green.png") + ")"
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Recruiting, pain-free.</h1>
+            <h1 className="title">
+              Complete challenges, learn new skills, land the job!
+            </h1>
           </Container>
         </div>
       </div>

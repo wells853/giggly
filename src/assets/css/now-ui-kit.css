@@ -4249,8 +4249,7 @@ img {
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 100%;
-    z-index: -1; }
+    height: 100%; }
   .page-header .content-center {
     position: absolute;
     top: 50%;

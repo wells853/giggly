@@ -37,13 +37,12 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">How does Gigly work?</h2>
+                <h2 className="title">How does Giggly work?</h2>
                 <h5 className="description">
                   It's simple: start completing interactive challenges, receive
                   feedback, and repeat! The more progress you make, the more
                   exposure you'll get to recruiters looking for someone just
                   like you.
-                  <br></br> Have fun, learn new skills, land the job!
                 </h5>
               </Col>
             </Row>
