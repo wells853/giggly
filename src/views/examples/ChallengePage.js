@@ -31,6 +31,7 @@ function LandingPage() {
   });
   return (
     <>
+      <ExamplesNavbar />
       <div className="section section-team text-center">
         <Container>
           <h2 className="title">Challenge tracks</h2>

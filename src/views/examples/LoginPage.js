@@ -17,7 +17,7 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import LoginNavbar from "components/Navbars/LoginNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 
 function LoginPage() {
@@ -71,6 +71,7 @@ function LoginPage() {
 
   return (
     <>
+      <LoginNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div
           className="page-header-image"
@@ -123,7 +124,7 @@ function LoginPage() {
                       </InputGroupAddon>
                       <Input
                         placeholder="Password"
-                        type="text"
+                        type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
                       ></Input>
