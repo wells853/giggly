@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link, Router } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -69,7 +69,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Username"
+                        placeholder="Username or Email Address..."
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -87,7 +87,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Access Code"
+                        placeholder="Password..."
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -95,16 +95,18 @@ function LoginPage() {
                     </InputGroup>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Button
-                      block
-                      className="btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      size="lg"
-                    >
-                      Login
-                    </Button>
+                    <Link to="/ChallengePage">
+                      <Button
+                        block
+                        className="btn-round"
+                        color="info"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                        size="lg"
+                      >
+                        Log In
+                      </Button>
+                    </Link>
                   </CardFooter>
                 </Form>
               </Card>

@@ -31,6 +31,7 @@ function LandingPage() {
   });
   return (
     <>
+      <ExamplesNavbar />
       <div className="wrapper">
         <LandingPageHeader />
         <div className="section section-about-us">
