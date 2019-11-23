@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Router } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -37,9 +38,11 @@ function ProfilePage() {
         <div className="section">
           <Container>
             <div className="button-container">
-              <Button className="btn-round" color="info" size="lg">
-                Start Challenge
-              </Button>
+              <Link to="/messaging-page">
+                <Button className="btn-round" color="info" size="lg">
+                  Start Challenge
+                </Button>
+              </Link>
             </div>
             <Row>
               <Col className="ml-auto mr-auto" md="6">

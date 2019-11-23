@@ -130,7 +130,7 @@ function LoginPage() {
                     </InputGroup>
                   </CardBody>
                   <CardFooter className="text-center">
-                    <Link to="/challenge-page">
+                    <Link to="/profile-page">
                       <Button
                         block
                         className="btn-round"
