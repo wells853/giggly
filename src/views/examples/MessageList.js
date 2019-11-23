@@ -6,10 +6,12 @@ class MessagesList extends Component {
     const styles = {
       container: {
         overflowY: "scroll",
+        overflowX: "hidden",
         flex: "1 1 0"
       },
       ul: {
-        listStyle: "none"
+        listStyle: "none",
+        paddingLeft: 0
       },
       li: {
         marginTop: 13,
