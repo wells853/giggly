@@ -11,7 +11,8 @@ class MessagesList extends Component {
       },
       ul: {
         listStyle: "none",
-        paddingLeft: 0
+        paddingLeft: "1em",
+        paddingRight: "1em"
       },
       li: {
         marginTop: 13,
