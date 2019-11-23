@@ -14,20 +14,6 @@ class Messaging extends Component {
       messages: []
     };
     this.sendMessage = this.sendMessage.bind(this);
-    if (false) {
-      fetch(
-        "http://ec2-35-162-213-113.us-west-2.compute.amazonaws.com:3001/startAdminMessages",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            room_id: "cc6a8b1e-d5e8-45c1-8802-2317987021ce"
-          })
-        }
-      );
-    }
   }
 
   sendMessage(text) {
@@ -48,27 +34,55 @@ class Messaging extends Component {
       })
     });
 
-    chatManager
-      .connect()
-      .then(currentUser => {
-        this.setState({ currentUser });
-        return currentUser.subscribeToRoom({
-          roomId: "cc6a8b1e-d5e8-45c1-8802-2317987021ce",
-          messageLimit: 100,
-          hooks: {
-            onMessage: message => {
-              this.setState({
-                messages: [...this.state.messages, message]
-              });
-            },
-            onPresenceChange: () => this.forceUpdate()
-          }
-        });
-      })
-      .then(currentRoom => {
-        this.setState({ currentRoom });
-      })
-      .catch(error => console.error("LOLOLOLOL", error));
+    fetch(
+      "http://ec2-35-162-213-113.us-west-2.compute.amazonaws.com:3001/getNewRoom",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    ).then((res) => {
+      res.json().then(data => {
+        const room_id = data.room_id;
+        chatManager
+          .connect()
+          .then(currentUser => {
+            this.setState({ currentUser });
+            return currentUser.subscribeToRoom({
+              roomId: room_id,
+              messageLimit: 100,
+              hooks: {
+                onMessage: message => {
+                  this.setState({
+                    messages: [...this.state.messages, message]
+                  });
+                },
+                onPresenceChange: () => this.forceUpdate()
+              }
+            });
+          })
+          .then(currentRoom => {
+            this.setState({ currentRoom });
+
+            if (false) {
+              fetch(
+                "http://ec2-35-162-213-113.us-west-2.compute.amazonaws.com:3001/startAdminMessages",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({
+                    room_id: room_id
+                  })
+                }
+              );
+            }
+          })
+          .catch(error => console.error("LOLOLOLOL", error));
+          })
+    });
   }
 
   render() {
