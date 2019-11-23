@@ -6,7 +6,7 @@ class MessagesList extends Component {
     const styles = {
       container: {
         overflowY: "scroll",
-        flex: 1
+        flex: "1 1 0"
       },
       ul: {
         listStyle: "none"
