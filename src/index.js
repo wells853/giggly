@@ -31,6 +31,8 @@ import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import ChallengePage from "views/examples/ChallengePage.js";
+import MessagingPage from "views/examples/Messaging.js";
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -47,6 +49,10 @@ ReactDOM.render(
         <Route
           path="/profile-page"
           render={props => <ProfilePage {...props} />}
+        />
+        <Route
+          path="/messaging-page"
+          render={props => <MessagingPage {...props} />}
         />
         <Route path="/login-page" render={props => <LoginPage {...props} />} />
         <Route
