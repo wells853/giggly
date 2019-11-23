@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Chatkit from "@pusher/chatkit-client";
 import MessageList from "./MessageList";
 import SendMessageForm from "./SendMessage";
+import WhosOnlineList from "./WhosOnlineList";
 
 class Messaging extends Component {
   constructor(props) {
@@ -13,18 +14,20 @@ class Messaging extends Component {
       messages: []
     };
     this.sendMessage = this.sendMessage.bind(this);
-    fetch(
-      "http://ec2-35-162-213-113.us-west-2.compute.amazonaws.com:3001/startAdminMessages",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          room_id: "cc6a8b1e-d5e8-45c1-8802-2317987021ce"
-        })
-      }
-    );
+    if (false) {
+      fetch(
+        "http://ec2-35-162-213-113.us-west-2.compute.amazonaws.com:3001/startAdminMessages",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            room_id: "cc6a8b1e-d5e8-45c1-8802-2317987021ce"
+          })
+        }
+      );
+    }
   }
 
   sendMessage(text) {
@@ -57,7 +60,8 @@ class Messaging extends Component {
               this.setState({
                 messages: [...this.state.messages, message]
               });
-            }
+            },
+            onPresenceChange: () => this.forceUpdate()
           }
         });
       })
@@ -96,7 +100,10 @@ class Messaging extends Component {
       <div style={styles.container}>
         <div style={styles.chatContainer}>
           <aside style={styles.whosOnlineListContainer}>
-            <h2>Who's online PLACEHOLDER</h2>
+            <WhosOnlineList
+              currentUser={this.state.currentUser}
+              users={this.state.currentRoom.users}
+            />
           </aside>
           <section style={styles.chatListContainer}>
             <MessageList

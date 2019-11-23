@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Form, FormGroup, Input } from "reactstrap";
 
 class SendMessageForm extends Component {
   constructor(props) {
@@ -45,15 +46,16 @@ class SendMessageForm extends Component {
     return (
       <div style={styles.container}>
         <div>
-          <form onSubmit={this.onSubmit} style={styles.form}>
-            <input
-              type="text"
-              placeholder="Type a message here then hit ENTER"
+          <Form onSubmit={this.onSubmit} style={styles.form}>
+            <Input
+              className="form-control-lg"
+              id="exampleFormControlInput1"
+              placeholder="Type a message here then hit enter"
               onChange={this.onChange}
               value={this.state.text}
-              style={styles.input}
-            />
-          </form>
+              type="text"
+            ></Input>
+          </Form>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button, Container, Row, Col } from "reactstrap";
 
 class MessagesList extends Component {
   render() {
@@ -30,9 +31,77 @@ class MessagesList extends Component {
           {this.props.messages.map((message, index) => (
             <li key={index} style={styles.li}>
               <div>
-                <span style={styles.senderUsername}>{message.senderId}</span>{" "}
+                {message.senderId === "rayan" ? (
+                  <Row>
+                    <Col></Col>
+                    <Col xs="auto">
+                      <h6>{message.senderId}</h6>
+                    </Col>
+                  </Row>
+                ) : (
+                  <div>
+                    {message.senderId === "Admin" ? (
+                      <Row>
+                        <Col></Col>
+                        <Col xs="auto">
+                          <h6>{message.senderId}</h6>
+                        </Col>
+                        <Col></Col>
+                      </Row>
+                    ) : (
+                      <h6>{message.senderId}</h6>
+                    )}
+                  </div>
+                )}
               </div>
-              <p style={styles.message}>{message.text}</p>
+              {message.senderId === "Admin" ? (
+                <Row>
+                  <Col></Col>
+                  <Col xs="auto">
+                    <Button
+                      href="#"
+                      className="btn-round"
+                      disabled
+                      color="success"
+                      size="lg"
+                    >
+                      {message.text}
+                    </Button>
+                  </Col>
+                  <Col></Col>
+                </Row>
+              ) : (
+                <div>
+                  {message.senderId === "rayan" ? (
+                    <Row>
+                      <Col></Col>
+                      <Col xs="auto">
+                        <Button
+                          position="right"
+                          href="#"
+                          className="btn-round"
+                          disabled
+                          color="primary"
+                          size="lg"
+                        >
+                          {message.text}
+                        </Button>
+                      </Col>
+                    </Row>
+                  ) : (
+                    <Button
+                      position="right"
+                      href="#"
+                      className="btn-round"
+                      disabled
+                      color="info"
+                      size="lg"
+                    >
+                      {message.text}
+                    </Button>
+                  )}
+                </div>
+              )}
             </li>
           ))}
         </ul>
